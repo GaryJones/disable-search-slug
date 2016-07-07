@@ -3,7 +3,7 @@ Contributors: GaryJ
 Tags: search, permalinks
 Requires at least: 1.5.0
 Tested up to: 4.6.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,10 +36,17 @@ Yes
 
 == Changelog ==
 
+= 1.0.1 =
+* Fix permalink change not persisting through flush rewrite rules.
+* Fix change log link.
+
 = 1.0.0 =
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Critical bug fix for intended functionality.
 
 = 1.0.0 =
 Initial release.
