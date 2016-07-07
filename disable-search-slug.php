@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name:       Disable Search Slug
  * Description:       Stops <code>/search/...</code> URLs from working, resulting in a WordPress 404 page not found.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Gary Jones
  * Text Domain:       disable-search-slug
  * License:           GPL-2.0+
