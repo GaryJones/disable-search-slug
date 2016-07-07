@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+- Fix permalink change not persisting through flush rewrite rules.
 - Fix change log link
 
 ## 1.0.0 - 2016-07-07

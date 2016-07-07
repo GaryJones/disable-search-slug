@@ -20,16 +20,20 @@
  * GitHub Branch:     master
  */
 
-register_deactivation_hook( __FILE__ , 'flush_rewrite_rules' );
-register_activation_hook( __FILE__ , 'disable_search_slug_flush_rewrite_rules' );
+// Wipe out rules for search permalink structure on every page load, in case the
+// rules are flushed by WP core, another plugin, a user visiting Settings -> Permalinks.
+add_action( 'init', function() {
+	add_filter( 'search_rewrite_rules', '__return_empty_array' );
+} );
 
-/**
- * Amend rewrite rules and flush rewrite rules when activated.
- *
- * @since 1.0.0
- */
-function disable_search_slug_flush_rewrite_rules() {
-	// Wipe out the rules for search permalink structure.
+register_activation_hook( __FILE__ , function() {
+	// Wipe out the rules for search permalink structure, on plugin activation.
 	add_filter( 'search_rewrite_rules', '__return_empty_array' );
 	flush_rewrite_rules();
-}
+} );
+
+register_deactivation_hook( __FILE__ , function() {
+	// Undo the change in rules to search rules, and flush the rules, on plugin deactivation.
+	remove_filter( 'search_rewrite_rules', '__return_empty_array' );
+	flush_rewrite_rules();
+} );
