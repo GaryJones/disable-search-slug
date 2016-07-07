@@ -5,9 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-_Nothing yet._
+- Fix change log link
 
 ## 1.0.0 - 2016-07-07
 - Initial Release
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/GaryJones/disable-search-slug/compare/1.0.0...HEAD
